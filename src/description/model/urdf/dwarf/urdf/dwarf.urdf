@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="utf-8"?>
+<robot
+  name="dwarf">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0068392 1.0436E-05 0.083505"
+        rpy="0 0 0" />
+      <mass
+        value="2.6893" />
+      <inertia
+        ixx="0.0098058"
+        ixy="4.9971E-08"
+        ixz="9.4482E-05"
+        iyy="0.0053708"
+        iyz="2.3438E-09"
+        izz="0.0071985" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="l_hip_z_link">
+    <inertial>
+      <origin
+        xyz="-0.064817 6.9619E-08 0.014495"
+        rpy="0 0 0" />
+      <mass
+        value="0.52548" />
+      <inertia
+        ixx="0.00046561"
+        ixy="5.5145E-10"
+        ixz="-7.8365E-05"
+        iyy="0.00038979"
+        iyz="7.8212E-10"
+        izz="0.00030048" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/l_hip_z_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/l_hip_z_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_hip_z_joint"
+    type="revolute">
+    <origin
+      xyz="0 0.0625 -0.0976"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="l_hip_z_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.785"
+      upper="0.785"
+      effort="6"
+      velocity="20" />
+  </joint>
+  <link
+    name="l_hip_x_link">
+    <inertial>
+      <origin
+        xyz="-0.0027836 0.03675 -2.2289E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.68764" />
+      <inertia
+        ixx="0.00043068"
+        ixy="-1.5772E-05"
+        ixz="-5.2661E-10"
+        iyy="0.00076066"
+        iyz="-2.1988E-10"
+        izz="0.00047342" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/l_hip_x_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.75294 0.75294 0.75294 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/l_hip_x_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_hip_x_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="l_hip_z_link" />
+    <child
+      link="l_hip_x_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.523"
+      upper="0.785"
+      effort="8"
+      velocity="20" />
+  </joint>
+  <link
+    name="l_hip_y_link">
+    <inertial>
+      <origin
+        xyz="0.00124509715095543 -0.0181108406254454 -0.0268215324144253"
+        rpy="0 0 0" />
+      <mass
+        value="0.879426303698116" />
+      <inertia
+        ixx="0.00155905784910185"
+        ixy="-4.01402271672183E-07"
+        ixz="5.23750882569672E-05"
+        iyy="0.00190482718607552"
+        iyz="5.56322294870322E-06"
+        izz="0.000487525681425297" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/l_hip_y_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/l_hip_y_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_hip_y_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="l_hip_x_link" />
+    <child
+      link="l_hip_y_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.024"
+      upper="0.5"
+      effort="8"
+      velocity="20" />
+  </joint>
+  <link
+    name="l_knee_y_link">
+    <inertial>
+      <origin
+        xyz="0.00710245391866418 0.000839155677053054 -0.0757645032512213"
+        rpy="0 0 0" />
+      <mass
+        value="0.527089426699505" />
+      <inertia
+        ixx="0.000704915216416722"
+        ixy="-4.76265439760832E-07"
+        ixz="-1.86316764480535E-05"
+        iyy="0.000782426869890322"
+        iyz="2.16462639835199E-06"
+        izz="0.000129570094293804" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/l_knee_y_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/l_knee_y_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_knee_y_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.2"
+      rpy="0 0 0" />
+    <parent
+      link="l_hip_y_link" />
+    <child
+      link="l_knee_y_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="2.2"
+      effort="12"
+      velocity="20" />
+  </joint>
+  <link
+    name="l_ankle_y_link">
+    <inertial>
+      <origin
+        xyz="-3.56954424352018E-10 -5.9963648352257E-09 -1.47393208749236E-12"
+        rpy="0 0 0" />
+      <mass
+        value="0.010913832988473" />
+      <inertia
+        ixx="1.90596155834406E-06"
+        ixy="5.77039537176499E-16"
+        ixz="-8.73480369999165E-13"
+        iyy="1.10485071159351E-07"
+        iyz="2.29287942233869E-13"
+        izz="1.92371341930651E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/l_ankle_y_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/l_ankle_y_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_ankle_y_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.2"
+      rpy="0 0 0" />
+    <parent
+      link="l_knee_y_link" />
+    <child
+      link="l_ankle_y_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.134"
+      upper="0.872"
+      effort="2"
+      velocity="20" />
+  </joint>
+  <link
+    name="l_ankle_x_link">
+    <inertial>
+      <origin
+        xyz="-0.00128648028692233 5.55374695537791E-09 -0.0184464108832921"
+        rpy="0 0 0" />
+      <mass
+        value="0.05976663040582" />
+      <inertia
+        ixx="1.55718211567763E-05"
+        ixy="4.61604480722049E-12"
+        ixz="9.54984081587471E-07"
+        iyy="5.62428903887595E-05"
+        iyz="5.81985939474174E-12"
+        izz="6.82858061214022E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/l_ankle_x_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/l_ankle_x_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="l_ankle_x_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="l_ankle_y_link" />
+    <child
+      link="l_ankle_x_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.349"
+      upper="0.349"
+      effort="1"
+      velocity="20" />
+  </joint>
+  <link
+    name="r_hip_z_link">
+    <inertial>
+      <origin
+        xyz="-0.0648171153102327 6.96192279936447E-08 0.0144946835968221"
+        rpy="0 0 0" />
+      <mass
+        value="0.525478813265369" />
+      <inertia
+        ixx="0.000465614047867923"
+        ixy="5.51447244204261E-10"
+        ixz="-7.83647581842767E-05"
+        iyy="0.000389794744504201"
+        iyz="7.82119931452291E-10"
+        izz="0.000300483764018686" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/r_hip_z_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/r_hip_z_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_hip_z_joint"
+    type="revolute">
+    <origin
+      xyz="0 -0.0625 -0.0976"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="r_hip_z_link" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-0.785"
+      upper="0.785"
+      effort="6"
+      velocity="20" />
+  </joint>
+  <link
+    name="r_hip_x_link">
+    <inertial>
+      <origin
+        xyz="-0.00278359797173064 -0.0367495625913438 2.22895785162436E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.687640451875291" />
+      <inertia
+        ixx="0.000430678234824923"
+        ixy="1.57720977537199E-05"
+        ixz="5.2660852310129E-10"
+        iyy="0.000760658296850431"
+        iyz="-2.19876655846566E-10"
+        izz="0.000473424899030397" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/r_hip_x_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/r_hip_x_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_hip_x_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="r_hip_z_link" />
+    <child
+      link="r_hip_x_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.785"
+      upper="0.523"
+      effort="8"
+      velocity="20" />
+  </joint>
+  <link
+    name="r_hip_y_link">
+    <inertial>
+      <origin
+        xyz="0.00179738911658307 0.0181105143205143 -0.0267542682581269"
+        rpy="0 0 0" />
+      <mass
+        value="0.879425956734143" />
+      <inertia
+        ixx="0.00156016615153423"
+        ixy="5.80391068939658E-07"
+        ixz="4.23499263659916E-05"
+        iyy="0.00190482779168223"
+        iyz="-5.67513436727745E-06"
+        izz="0.000486418482301438" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/r_hip_y_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/r_hip_y_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_hip_y_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="r_hip_x_link" />
+    <child
+      link="r_hip_y_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-2.024"
+      upper="0.5"
+      effort="8"
+      velocity="20" />
+  </joint>
+  <link
+    name="r_knee_y_link">
+    <inertial>
+      <origin
+        xyz="0.00710245415213927 -0.000839155493262508 -0.0757645080168379"
+        rpy="0 0 0" />
+      <mass
+        value="0.527089463148088" />
+      <inertia
+        ixx="0.0007049163677575"
+        ixy="4.76972544940647E-07"
+        ixz="-1.86318427389797E-05"
+        iyy="0.000782426133909345"
+        iyz="-2.16470454419427E-06"
+        izz="0.000129570125586677" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/r_knee_y_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/r_knee_y_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_knee_y_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.2"
+      rpy="0 0 0" />
+    <parent
+      link="r_hip_y_link" />
+    <child
+      link="r_knee_y_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="0"
+      upper="2.2"
+      effort="12"
+      velocity="20" />
+  </joint>
+  <link
+    name="r_ankle_y_link">
+    <inertial>
+      <origin
+        xyz="-4.13186831971224E-10 -5.99636477971455E-09 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.010913832988473" />
+      <inertia
+        ixx="1.90596155834406E-06"
+        ixy="5.77037633135559E-16"
+        ixz="-8.73477874303164E-13"
+        iyy="1.10485071159351E-07"
+        iyz="2.29287943311938E-13"
+        izz="1.92371341930651E-06" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/r_ankle_y_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/r_ankle_y_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_ankle_y_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 -0.2"
+      rpy="0 0 0" />
+    <parent
+      link="r_knee_y_link" />
+    <child
+      link="r_ankle_y_link" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.134"
+      upper="0.872"
+      effort="2"
+      velocity="20" />
+  </joint>
+  <link
+    name="r_ankle_x_link">
+    <inertial>
+      <origin
+        xyz="-0.00128648010153237 5.33019742926522E-09 -0.0184464112962747"
+        rpy="0 0 0" />
+      <mass
+        value="0.0597666285978986" />
+      <inertia
+        ixx="1.55718207614355E-05"
+        ixy="4.51533220827267E-12"
+        ixz="9.54983846744379E-07"
+        iyy="5.62428898500431E-05"
+        iyz="5.94521756533254E-12"
+        izz="6.8285806096514E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/r_ankle_x_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.752941176470588 0.752941176470588 0.752941176470588 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://description/model/urdf/dwarf/meshes/r_ankle_x_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="r_ankle_x_joint"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="r_ankle_y_link" />
+    <child
+      link="r_ankle_x_link" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-0.349"
+      upper="0.349"
+      effort="1"
+      velocity="20" />
+  </joint>
+
+  <link name="contact1"/>
+  <link name="contact2"/>
+  <link name="contact3"/>
+  <link name="contact4" />
+  <link name="contact5"/>
+  <link name="contact6"/>
+  <link name="contact7"/>
+  <link name="contact8"/>
+  <link name="imu_link"/>
+
+  <joint name="contact1_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.06 0.03 -0.025"/>
+    <parent link="l_ankle_x_link"/>
+    <child link="contact1"/>
+  </joint>
+  <joint name="contact2_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.06 -0.03 -0.025"/>
+    <parent link="l_ankle_x_link"/>
+    <child link="contact2"/>
+  </joint>
+  <joint name="contact3_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.06 0.03 -0.025"/>
+    <parent link="l_ankle_x_link"/>
+    <child link="contact3"/>
+  </joint>
+  <joint name="contact4_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.06 -0.03 -0.025"/>
+    <parent link="l_ankle_x_link"/>
+    <child link="contact4"/>
+  </joint>
+  <joint name="contact5_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.06 0.03 -0.025"/>
+    <parent link="r_ankle_x_link"/>
+    <child link="contact5"/>
+  </joint>
+  <joint name="contact6_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0.06 -0.03 -0.025"/>
+    <parent link="r_ankle_x_link"/>
+    <child link="contact6"/>
+  </joint>
+  <joint name="contact7_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.06 0.03 -0.025"/>
+    <parent link="r_ankle_x_link"/>
+    <child link="contact7"/>
+  </joint>
+  <joint name="contact8_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="-0.06 -0.03 -0.025"/>
+    <parent link="r_ankle_x_link"/>
+    <child link="contact8"/>
+  </joint>
+  <joint name="imu_joint" type="fixed">
+    <origin rpy="0 0 0" xyz="0 0 0"/>
+    <parent link="base_link"/>
+    <child link="imu_link"/>
+  </joint>
+
+</robot>
