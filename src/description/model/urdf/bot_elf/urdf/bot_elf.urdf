@@ -604,7 +604,7 @@
     </collision>
   </link>
   <joint
-    name="r_knee_y_cod"
+    name="r_knee_y_joint"
     type="revolute">
     <origin
       xyz="0 0 -0.3"
@@ -973,17 +973,17 @@
     name="r_shld_y_link">
     <inertial>
       <origin
-        xyz="0 0 0"
+        xyz="-0.000602020278894832 0.00203253807550383 5.25078036642812E-05"
         rpy="0 0 0" />
       <mass
-        value="0" />
-      <inertia
-        ixx="0"
-        ixy="0"
-        ixz="0"
-        iyy="0"
-        iyz="0"
-        izz="0" />
+        value="0.397430898254414" />
+        <inertia
+        ixx="0.000197533082877176"
+        ixy="2.13914774743445E-06"
+        ixz="-4.75269653041195E-07"
+        iyy="0.000172304821546368"
+        iyz="1.06293202473427E-06"
+        izz="0.000193880730475137" />
     </inertial>
     <visual>
       <origin
